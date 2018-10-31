@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="gb2312">
-<title>ÎŞ±êÌâÎÄµµ</title>
+<meta charset="utf-8">
+<title>æ— æ ‡é¢˜æ–‡æ¡£</title>
 <style>
 	
 	
@@ -14,7 +14,7 @@
 <!---->
 <div id="box">
 	{{mseg}}
-	<button @click="DivisionGet" @keyup.enter="DivisionGet">°²Å¤</button>
+	<button @click="DivisionGet" @keyup.enter="DivisionGet">å®‰æ‰­</button>
 
 </div>
 
@@ -23,7 +23,7 @@
 		
 		el: '#box',
 		  data: {
-			mseg: 'webÇ°¶Ë¿ª·¢!'
+			mseg: 'webå‰ç«¯å¼€å‘!'
 		  },
 		methods:{
 			DivisionGet(){
@@ -36,7 +36,7 @@
 </script>	
 <!---->
 <div class="box2" id="box2">
-	<p v-bind:title="mag">ÏÔÊ¾³öÀ´</p>
+	<p v-bind:title="mag">æ˜¾ç¤ºå‡ºæ¥</p>
 </div>
 
 <script>
@@ -44,7 +44,7 @@
 		
 		el: '#box2',
 		data:{
-			mag: 'Ò³Ãæ¼ÓÔØÓÚ ' + new Date()
+			mag: 'é¡µé¢åŠ è½½äº ' + new Date()
 		}
 		
 	})
@@ -52,7 +52,7 @@
 <!---->
 
 <div id="box3">
-	<p v-if="seen">ÏÔÊ¾ÖĞ</p>
+	<p v-if="seen">æ˜¾ç¤ºä¸­</p>
 </div>
 
 <script>
@@ -93,7 +93,7 @@
 <!---->
 <div id="box5">
 	<p>{{massage}}</p>
-	<button v-on:click="removermsg">µã»÷</button>
+	<button v-on:click="removermsg">ç‚¹å‡»</button>
 </div>
 
 <script>
@@ -101,7 +101,7 @@
 		
 		el:"#box5",
 		data:{
-			massage:"Ò»¾ä»°ËµÃ÷"
+			massage:"ä¸€å¥è¯è¯´æ˜"
 		},
 		methods: {
 		removermsg: function () {
@@ -122,7 +122,7 @@
 	var box6 = new Vue({
 		el:"#box6",
 		data:{
-			massage:"ÒªÒ»¾ä×Ö"
+			massage:"è¦ä¸€å¥å­—"
 		}
 		
 	})
