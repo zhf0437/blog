@@ -51,10 +51,10 @@ $(function(){
                     '<div class="userpic"><img src='+_userpic+' alt=""></div>' +
                     '<span class="userName">'+_userName+'</span>' +
                     '</div>'+
-                     '<img src='+_src+' class="pic" alt="">' +
-                     '<img src="images/globalPlayBig.png" class="start" alt="">'+
+                     // '<img src='+_src+' class="pic" alt="">' +
+                     // '<img src="images/globalPlayBig.png" class="start" alt="">'+
 
-//                    '<video class="video1" src='+desc(_videoUrl)+' controls poster='+_src+' loop></video>' +
+                    '<video class="video1" src='+desc(_videoUrl)+' controls poster='+_src+' loop></video>' +
                     '<div class="bottomzz">' +
                     '<h3 class="title">'+_tit+'</h3>' +
                     '<div class="opera">' +
