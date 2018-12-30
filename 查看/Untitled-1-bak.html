@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Swiper demo</title>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-touch-fullscreen" content="YES" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+window.onresize=auto;
+auto()
+function auto (){
+	var deviceWidth = document.documentElement.clientWidth;
+	if(deviceWidth > 750) deviceWidth = 750;
+	document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+}
+</script>
+</head>
+<body>
+<div id="app">
+    <div class="swiper-container" >
+        <div class="swiper-wrapper" id="main">
+            <div class="swiper-slide" v-for="(item,index) of DataList">
+                <img :src="item.mvPic" alt="" width="100%">
+                <!--<video :src="item.mvUrl" width="100%" height="100%"></video>-->
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+    <div @click="getData()" style="position: fixed; left: 0; top: 0; z-index: 20; width: 100%; height: 20px; background: #000;">111111</div>
+</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/swiper.min.js"></script>
+	<script src="js/index.js"></script>
+
+    <script>
+
+    var resList = [];
+    var app = new Vue({
+        el:'#app',
+        data(){
+            return{
+                DataList:[],
+                num:0,
+              
+            }
+        },
+        mounted(){
+            if(this.num==0){
+                this.getData();
+            }
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                direction: 'vertical',
+                onSlideNextStart: function(swiper){
+                    this.getData();
+
+                },
+                onSlidePrevStart: function(swiper){
+                    alert('上滑;');
+                },
+
+            });
+
+        },
+        methods:{
+            getData(){
+                alert(111)
+                $.ajax({
+                    type: "GET",
+                    url: "http://fuli.vivcms.com/api.php",
+                    dataType: "json",
+                    success: function(res){
+                        resList.push(res.data);
+                        swiper.appendSlide('<div class="swiper-slide">{{res.data}}</div>');
+                     }
+                });
+                this.DataList = resList;
+                console.log(this.DataList)
+
+            }
+
+        }
+    })
+
+    </script>
+
+
+
+</body>
+</html>
