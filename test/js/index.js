@@ -60,7 +60,7 @@ $(function(){
                     // '<img src='+_src+' class="pic" alt="">' +
                     // '<img src="images/globalPlayBig.png" class="start" alt="">'+
 
-                    '<video class="video1" src="http://106.38.183.45/yoo.tc.qq.com/A01A048MwmFHMiQazlBWkfU_1DvbIRSOLFK7GHjXHTj0/d0788duuv5p.mp4?sdtfrom=v7156&guid=866e53b09bdfd96f096ca20dc5045d85&vkey=5FC170A374D7E4D185FC68A68FBB14D33124975F33989B8DDC3284D1F77B596A90FFC11326ED58F67F70A6EBBA1A04E5584DAEF727415BEC7093A12066BC8C5B349D64E5F1C46ABE4C14B8E31DBEE5A7786844601E1A2A49BD6E773AF71008D375EB2A8E2662AF0AA50B0AF6A7C6AE32&platform=2" controls poster='+_src+' loop id=v'+num+'></video>' +
+                    '<video class="video1" src="http://106.38.183.45/yoo.tc.qq.com/A01A048MwmFHMiQazlBWkfU_1DvbIRSOLFK7GHjXHTj0/d0788duuv5p.mp4?sdtfrom=v7156&guid=866e53b09bdfd96f096ca20dc5045d85&vkey=5FC170A374D7E4D185FC68A68FBB14D33124975F33989B8DDC3284D1F77B596A90FFC11326ED58F67F70A6EBBA1A04E5584DAEF727415BEC7093A12066BC8C5B349D64E5F1C46ABE4C14B8E31DBEE5A7786844601E1A2A49BD6E773AF71008D375EB2A8E2662AF0AA50B0AF6A7C6AE32&platform=2" controls poster='+_src+' loop id=v'+num+' webkit-playsinline="true" playsinline="true"></video>' +
                     // '<video class="video1" src='+desc(_videoUrl)+' controls poster='+_src+' loop></video>' +
                     '<div class="bottomzz">' +
                     '<h3 class="title">'+_tit+'</h3>' +
